@@ -11,7 +11,8 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    "nativewind-env.d.ts",
-    "app/index.jsx"
-  ]
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts",
+    "nativewind-env.d.ts"
+, "app/index.jsx", "app/_layout.jsx", "app/(tabs)/Trips.jsx", "app/(tabs)/Profile.jsx", "app/(tabs)/vishal.jsx", "app/(tabs)/Ar.jsx", "app/(tabs)/_layout.tsx"  ]
 }

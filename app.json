@@ -16,7 +16,18 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "CAMERA",
+        "RECORD_AUDIO",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ],
+      "package": "com.aadit001.Hackk"
     },
     "web": {
       "bundler": "metro",
@@ -26,17 +37,24 @@
     "plugins": [
       "expo-router",
       [
-        "expo-splash-screen",
+        "expo-camera",
         {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "cameraPermission": "Allow access to camera for AR features"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow location access for navigation"
         }
       ]
     ],
-    "experiments": {
-      "typedRoutes": true
+    "extra": {
+      "hereApiKey": "${HERE_API_KEY}",
+      "router": {},
+      "eas": {
+        "projectId": "2cd841a4-8c57-40ce-8bb6-e414867cefb0"
+      }
     }
   }
 }

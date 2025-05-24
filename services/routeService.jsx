@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { HERE_API_KEY } from '@env';
+// import { HERE_API_KEY } from '@env';
 
 export const fetchRouteWithShape = async (origin, destination, mode = 'pedestrian') => {
   try {
@@ -13,7 +13,7 @@ export const fetchRouteWithShape = async (origin, destination, mode = 'pedestria
         origin: `${origin.lat},${origin.lng}`,
         destination: `${destination.lat},${destination.lng}`,
         return: 'polyline,summary,actions,instructions',
-        apiKey: HERE_API_KEY
+        apiKey: process.env.HERE_API_KEY
       },
       timeout: 10000
     });
